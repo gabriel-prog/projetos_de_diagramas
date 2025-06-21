@@ -1,26 +1,37 @@
 # Sistema Hospitalar – Diagrama ER (Entidade-Relacionamento)
 
-Este projeto contém o **diagrama Entidade-Relacionamento (ERD)** do **Sistema Hospitalar**.
+Este projeto contém o diagrama do Sistema Hospitalar, feito em Graphviz.
 
 ---
 
 ## 📂 Arquivos nesta pasta:
 
-- sistema_hospitalar.dot → Código fonte do diagrama lingagem DOT (feito com Graphviz)
-- sistema_hospitalar.png → Imagem gerada do diagrama
+- **sistema_hospitalar.dot** → Código fonte do diagrama (Graphviz DOT)
+- **hospital.png** → Imagem gerada do diagrama (visualização abaixo)
 
 ---
 
-## 🛠️ Como visualizar o diagrama:
+## 🖼️ Visualização do diagrama:
 
-1. **Se quiser abrir o código DOT (.dot):
-   - Use uma IDE ou editor de texto como VS Code ou Notepad++.
-   - Ou abra com um editor online de Graphviz:  
-   👉 [https://dreampuf.github.io/GraphvizOnline/](https://dreampuf.github.io/GraphvizOnline/)
+Abaixo está a visualização do diagrama diretamente em PNG:
 
-2. Se quiser gerar a imagem (PNG) a partir do `.dot`:
-   - Tenha o "Graphviz" instalado no seu computador.
-   - Rode o comando:
+![Diagrama ER – Sistema Hospitalar](./hospital.png)
 
-```bash
-dot -Tpng sistema_hospitalar.dot -o sistema_hospitalar.png
+---
+
+## ✅ Sobre o sistema:
+
+O Sistema Hospitalar gerencia informações sobre:
+
+- Hospital
+- Ala
+- Médico
+- Enfermeira
+- Paciente
+- Atendimento
+
+Incluindo os relacionamentos entre essas entidades.
+
+---
+
+Autor: Gabriel Amaral Martines
