@@ -1,0 +1,55 @@
+digraph CasoDeUso_CursoDeIdiomas {
+    rankdir=TB; // Layout vertical, igual ao Visual Paradigm
+    labelloc="t";
+    labeljust="c";
+    fontsize=14;
+    fontname="Arial";
+    label="Diagrama de Caso de Uso – Sistema Curso de Idiomas\nAluno: Gabriel Amaral Martines    Prof: Roberto";
+
+    // ==== Estilo dos Atores ====
+    node [shape=box, style=filled, fillcolor="#AED6F1", fontname="Arial", fontsize=12];
+
+    Atendente [label="Atendente"];
+    Aluno [label="Aluno"];
+    Coordenador [label="Coordenador"];
+
+    // ==== Estilo dos Casos de Uso ====
+    node [shape=ellipse, style=filled, fillcolor="#D2B4DE", fontname="Arial", fontsize=12];
+
+    CadastroAluno [label="Cadastrar Aluno"];
+    LiberarTeste [label="Liberar Teste com Senha"];
+    PreencherFormulario [label="Preencher Formulário"];
+    RealizarTeste [label="Realizar Teste Eletrônico"];
+    CancelarTeste [label="Cancelar Teste"];
+    EmitirNota [label="Emitir Nota e Sugerir Nível"];
+    ConsultarProva [label="Consultar Prova Realizada"];
+    ImprimirProva [label="Imprimir Prova"];
+    InserirResultadoFinal [label="Inserir Resultado Final"];
+    EfetivarMatricula [label="Efetivar Matrícula"];
+
+    // ==== Relacionamentos: Atores para Casos de Uso ====
+
+    // Ações do Atendente
+    Atendente -> LiberarTeste;
+    Atendente -> ConsultarProva;
+    Atendente -> ImprimirProva;
+
+    // Ações do Aluno
+    Aluno -> PreencherFormulario;
+    Aluno -> CancelarTeste;
+
+    // Sequência obrigatória entre casos de uso
+    PreencherFormulario -> CadastroAluno [style=dashed, label="Obrigatório"];
+    CadastroAluno -> RealizarTeste [style=dashed, label="Obrigatório"];
+
+    // Emissão de nota após o teste
+    RealizarTeste -> EmitirNota;
+
+    // Ações do Coordenador
+    Coordenador -> ConsultarProva;
+    Coordenador -> InserirResultadoFinal;
+    Coordenador -> EfetivarMatricula;
+
+    // Dependência obrigatória
+    InserirResultadoFinal -> ConsultarProva [style=dashed, label="Obrigatório"];
+}
