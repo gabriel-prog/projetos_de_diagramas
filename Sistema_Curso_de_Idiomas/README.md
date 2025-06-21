@@ -6,8 +6,8 @@ Este projeto contém o **Diagrama de Caso de Uso** do sistema de avaliação de 
 
 ## 📂 Arquivos nesta pasta:
 
-- **sistema_curso_idiomas.dot** → Código fonte do diagrama (feito com Graphviz DOT)
-- **curso_idiomas.png** → Imagem gerada do diagrama (visualização abaixo)
+- **sistema_curso_idiomas.dot** → Código fonte do diagrama (Graphviz DOT)
+- **idiomas.png** → Imagem gerada do diagrama (visualização abaixo)
 
 ---
 
@@ -28,9 +28,7 @@ O sistema permite que a escola de idiomas faça a avaliação do nível linguís
 
 ## 🖼️ Visualização do diagrama:
 
-*(A imagem será exibida aqui quando o PNG for adicionado)*
-
-![Diagrama de Caso de Uso – Curso de Idiomas](./curso_idiomas.png)
+![Diagrama de Caso de Uso – Curso de Idiomas](./idiomas.png)
 
 ---
 
