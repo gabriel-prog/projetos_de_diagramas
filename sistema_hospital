@@ -1,0 +1,32 @@
+digraph MER_SistemaHospitalar {
+    rankdir=LR;
+    labelloc="t";
+    labeljust="c";
+    fontsize=14;
+    fontname="Arial";
+    label="Diagrama Entidade-Relacionamento – Sistema Hospitalar\nAluno: Gabriel Amaral Martines    Prof: Roberto";
+
+    // Estilo das entidades (verde claro, com título acima e atributos em células verticais)
+    node [shape=record, style=filled, fillcolor="#a8d5a2", fontname="Arial", fontsize=12, color="#5a8f5a"];
+
+    // ENTIDADES - TÍTULO NO TOPO E ATRIBUTOS EM COLUNA (VERTICAL DENTRO DA ENTIDADE)
+    Hospital [label="{ Hospital | { [PK] ID_Hospital | CNPJ [UK] | Nome | Endereço | Telefone } }"];
+
+    Ala [label="{ Ala | { [PK] ID_Ala | Código | [FK] ID_Hospital | Descrição } }"];
+
+    Medico [label="{ Médico | { [PK] ID_Medico | CRM [UK] | Nome | Especialidade | Telefone | Email } }"];
+
+    Enfermeira [label="{ Enfermeira | { [PK] ID_Enfermeira | CRE [UK] | Nome | Telefone | Email } }"];
+
+    Paciente [label="{ Paciente | { [PK] ID_Paciente | CPF [UK] | Nome | Data_Nascimento | Telefone | Email | Plano_Saude } }"];
+
+    Atendimento [label="{ Atendimento | { [PK] ID_Atendimento | Data_Hora | Diagnóstico | Observações | [FK] ID_Medico | [FK] ID_Paciente } }"];
+
+    // RELACIONAMENTOS (HORIZONTAL - LEFT TO RIGHT)
+    Hospital -> Ala [label="(1) Localiza-se em (N)", fontname="Arial", fontsize=10];
+    Medico -> Ala [label="(1) Responsável por (1)", fontname="Arial", fontsize=10];
+    Enfermeira -> Ala [label="(N) Trabalha em (1)", fontname="Arial", fontsize=10];
+    Medico -> Atendimento [label="(1) Realiza (N)", fontname="Arial", fontsize=10];
+    Paciente -> Atendimento [label="(1) Recebe (N)", fontname="Arial", fontsize=10];
+}
+
